@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="container">
+    <h1>Ofertas de Artículos de Bazar</h1>
+</div>
+</header>
+<nav class="menu">
+    <div class="menu-contenedor">
+        <ul class="menu-flex">
+            <li><a href="./nuestrahistoria.html">Quienes Somos</a></li>
+            <li><a href="./productosyofertas.html">Productos y Ofertas</a></li>
+        </ul>
+    </div>
+    </nav>
+<section id="ofertas">
+<div class="container">
+    <h2>Tabla de Productos</h2>
+    <table>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre del Producto</th>
+            <th>Precio</th>
+            <th>Seleccionar</th>
+        </tr>
+        <tr>
+            <td><img src="imagenes/plato.jpg" alt="Producto 1"></td>
+            <td>Plato</td>
+            <td>$6.350</td>
+            <td><button onclick="agregarCarrito('Producto 1', 20)">Añadir al Carrito</button></td>
+        </tr>
+        <tr>
+            <td><img src="imagenes/utensilios de cocina.jpg" alt="Producto 2"></td>
+            <td>Utensilios de Cocina</td>
+            <td>$28.500</td>
+            <td><button onclick="agregarCarrito('Producto 2', 15)">Añadir al Carrito</button></td>
+        </tr>
+        <tr>
+            <td><img src="imagenes/macetas.jpg" alt="Producto 3"></td>
+            <td>Macetas</td>
+            <td>$4.750</td>
+            <td><button onclick="agregarCarrito('Producto 3', 25)">Añadir al Carrito</button></td>
+        </tr>
+        <tr>
+            <td><img src="imagenes/tazas de porcelana.jpg" alt="Producto 4"></td>
+            <td>Tazas de Porcelana</td>
+            <td>$10.000</td>
+            <td><button onclick="agregarCarrito('Producto 4', 18)">Añadir al Carrito</button></td>
+        </tr>
+    </table>
+
+    <h2>Formulario de Compras</h2>
+    <form action="procesar_compra.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="producto">Selecciona un Producto:</label>
+        <select id="producto" name="producto" required>
+            <option value="Producto 1">Plato - $6.350</option>
+            <option value="Producto 2">Utensilios de Cocina - $28.500</option>
+            <option value="Producto 3">Macetas - $4.750</option>
+            <option value="Producto 4">Tazas de Porcelana - $10.000</option>
+        </select>
+        
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+        
+        <button type="submit">Enviar Compra</button>
+    </form>
+
+    <h2>Comentarios</h2>
+    <textarea id="comentario" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+    <button onclick="enviarComentario()">Enviar Comentario</button>
+</div>
+</section>
+
+<footer>
+<div class="container">
+    <p>2024 Bazar Familiar Online</p>
+</div>
+</footer>
+
+<script src="scripts.js"></script>
+
+
